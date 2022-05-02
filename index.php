@@ -10,16 +10,19 @@ $text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, assu
 
 $textLenght = strlen($text);
 
-$bannedWord = $_GET['soccia'];
+$bannedWord = $_GET["ohibo"];
 
-$censoredText = str_replace($bannedWord, '***', $text);
 
-$censoredTextLenght = strlen($censoredText);
 ?>
 
 <h1>Original Text</h1>
 <h3><?php echo($text) ?></h3>
 <h4> <?php echo('Text lenght: ' . $textLenght) ?> </h4>
+<?php 
+$censoredText = str_replace($bannedWord, '***', $text);
 
+$censoredTextLenght = strlen($censoredText);
+?>
 <h1>Censored Text</h1>
-<h3><?php  ?></h3>
+<h3><?php echo($censoredText) ?></h3>
+<h4> <?php echo('Text lenght: ' . $censoredTextLenght) ?> </h4>
